@@ -180,7 +180,7 @@ nav a:hover, .nav-heading {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 100px;
-    width: 96%;
+    
 }
 
 @media screen and (max-width:900px) {
@@ -210,7 +210,7 @@ nav a:hover, .nav-heading {
 }
 
 .header-info-panel-right-text {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .header-info-panel-right-bar {
@@ -218,7 +218,7 @@ nav a:hover, .nav-heading {
     background-color: #F14D34;
     height: 80px;
     width: 1px;
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 .header-info-panel-right-content-h1 {
