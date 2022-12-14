@@ -3,7 +3,6 @@ import HeaderVideo from "./HeaderVideo.vue";
 import AppNavButton from "./AppNavButton.vue";
 import AppLangButton from './AppLangButton.vue';
 import './assets/main.css';
-import AppLangButtonVue from './AppLangButton.vue';
 
 
 function DateDiff(date1:Date, date2:Date) {
@@ -12,19 +11,29 @@ function DateDiff(date1:Date, date2:Date) {
 
 
 window.addEventListener("DOMContentLoaded", function(){
-    let appHeaderVideo = document.getElementById("appHeaderVideo");
+    let appHeaderVideoContainer = document.getElementById("appHeaderVideo");
     let container = document.getElementsByTagName("body");
-    if (appHeaderVideo!= undefined && container != undefined){
-        appHeaderVideo.style.width=container[0].clientWidth+"px";
+    let video = document.getElementById("header-video");
+    let header = document.getElementsByTagName("header");
+    if (video!=undefined && header!=undefined){
+            header[0].style.height=video.clientHeight+"px";
+    }
+    if (appHeaderVideoContainer!= undefined && container != undefined){
+        appHeaderVideoContainer.style.width=container[0].clientWidth+"px";
         window.addEventListener("resize", function() {
-            let appHeaderVideo = document.getElementById("appHeaderVideo");
+            let appHeaderVideoContainer = document.getElementById("appHeaderVideo");
             let container = document.getElementsByTagName("body");
-            if (appHeaderVideo!= undefined && container != undefined){
-                appHeaderVideo.style.width=container[0].clientWidth+"px";
+            if (appHeaderVideoContainer!= undefined && container != undefined){
+                appHeaderVideoContainer.style.width=container[0].clientWidth+"px";
+            }
+            let video = document.getElementById("header-video");
+            let header = document.getElementsByTagName("header");
+            if (video!=undefined && header!=undefined){
+                header[0].style.height=video.clientHeight+"px";
             }
         });
     }
-    window.dispatchEvent(new Event('resize'));
+    let timeout = this.setTimeout(function(){window.dispatchEvent(new Event('resize'));},100); //костыль, я даун
 
     function showMenuMobile() {
         const intervalShow = setInterval(function (start:Date){
@@ -41,11 +50,6 @@ window.addEventListener("DOMContentLoaded", function(){
         let mobileMenu = document.getElementById("menu-mobile");
         if (mobileMenu!=null) mobileMenu.style.display="block";
         let mobileMenuButton = document.getElementById("header-mobile-button");
-        /*mobileMenuButton?.addEventListener("click", function(){
-            clearInterval(intervalShow);
-            mobileMenuButton?.addEventListener("click", showMenuMobile,{once: true});
-            if (mobileMenu!=null) {mobileMenu.style.display="none"; mobileMenu.style.top="-508px";}
-        },{once: true});*/
     }
 
     function hideMenuMobile() {
