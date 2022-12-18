@@ -306,6 +306,10 @@ nav a:hover, .nav-heading {
         width: 100%;
     }
 
+    .header-info-panel-right > div {
+        flex-basis: 30%;
+    }
+
     .header-info-panel-right-1 h1 {
         font-size: 48px;
     }
