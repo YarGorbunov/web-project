@@ -12,10 +12,10 @@ let show = ref(false);
 </script>
 
 <template>
-            <div @mouseover="show=true" @mouseleave="show=false" class="nav-heading"><a src="">{{props.heading}}</a><img class="arrow-nav" src="../../public/arrow.svg"></div>
+            <div @mouseover="show=true" @mouseleave="show=false" class="nav-heading"><a href="">{{props.heading}}</a><img class="arrow-nav" src="../../public/arrow.svg"></div>
             <div @mouseover="show=true" @mouseleave="show=false" v-show="show" class="nav-sub">
               <ul>
-                <li v-for="(sub, index) in props.subs" :key="index"><a src="">{{sub}}</a></li>
+                <li v-for="(sub, index) in props.subs" :key="index"><a href="">{{sub}}</a></li>
               </ul>
             </div>
 </template>
