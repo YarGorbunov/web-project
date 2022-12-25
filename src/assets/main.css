@@ -465,6 +465,7 @@ nav a:hover, .nav-heading {
     border-radius: 3px;
     box-shadow: 10px 5px 5px #f7f7f7;
     position: relative;
+    overflow: hidden;
 }
 
 .support-option-last {
@@ -490,7 +491,7 @@ nav a:hover, .nav-heading {
 .support-option-img-container {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
     z-index: 4;
 }
 
@@ -550,7 +551,7 @@ nav a:hover, .nav-heading {
     position: relative;
     max-width: 80%;
     bottom: -35px;
-    left: calc(-5%);
+    left: calc(-6%);
     display: flex;
     align-items: flex-end;
 }
